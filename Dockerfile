@@ -1,0 +1,12 @@
+FROM maven:3.6.3-jdk-8 AS build
+WORKDIR /app
+COPY excel-online/pom.xml .
+RUN mvn dependency:go-offline -B
+COPY excel-online/src ./src
+RUN mvn package -DskipTests -B
+
+FROM openjdk:8-jre-slim
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
