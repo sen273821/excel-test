@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://excel-test-production-66f2.up.railway.app/api/$1"
+      "dest": "https://excel-test-4e627710-4c0f-4f62-b4a6-a28988bdad0d-production.up.railway.app/api/$1"
     },
     {
       "handle": "filesystem"
