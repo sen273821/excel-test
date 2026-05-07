@@ -1,0 +1,31 @@
+# IDE
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Java
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Node
+excel-front/node_modules/
+excel-front/dist/
+
+# Test files
+test_data.xlsx
+
+# Claude
+claude-501/
+
+# Environment
+.env
+*.log
