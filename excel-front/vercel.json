@@ -1,25 +1,12 @@
 {
   "version": 2,
-  "builds": [
+  "framework": "vue",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "https://excel-test-4e627710-4c0f-4f62-b4a6-a28988bdad0d-production.up.railway.app/api/$1"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/api/:path*",
+      "destination": "https://excel-test-4e627710-4c0f-4f62-b4a6-a28988bdad0d-production.up.railway.app/api/:path*"
     }
   ]
 }
