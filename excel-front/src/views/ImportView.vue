@@ -192,4 +192,17 @@ export default {
   max-width: 800px;
   margin: 0 auto;
 }
+.import-view .el-upload-dragger {
+  border-radius: 8px;
+  border: 2px dashed #d9d9d9;
+  transition: border-color 0.3s;
+}
+.import-view .el-upload-dragger:hover {
+  border-color: #1890ff;
+}
+.import-view .el-icon-upload {
+  font-size: 48px;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
 </style>

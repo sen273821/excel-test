@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "framework": "vue",
-  "buildCommand": "npm run build",
+  "framework": null,
+  "buildCommand": "",
   "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "https://excel-test-4e627710-4c0f-4f62-b4a6-a28988bdad0d-production.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/((?!js|css|fonts|favicon|logo).*)",
+      "destination": "/index.html"
     }
   ]
 }
